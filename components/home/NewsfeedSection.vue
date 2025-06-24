@@ -33,7 +33,7 @@ onMounted(() => {
 
 <style scoped>
 .newsfeed-section {
-  padding: var(--spacing-xl);
+  padding: var(--spacing-l) 0;
   background-color: var(--color-background);
   text-align: center;
 }
@@ -61,6 +61,13 @@ onMounted(() => {
   padding-bottom: var(--spacing-m);
   overflow-x: auto;
   max-width: 100%;
+  padding: var(--spacing-xl);
+  /* Hide scrollbar for Webkit browsers */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.news-scroller::-webkit-scrollbar {
+  display: none;
 }
 
 .news-item {
@@ -71,6 +78,7 @@ onMounted(() => {
 .news-item h4 {
     font-family: var(--font-family-body);
     font-weight: var(--font-weight-bold);
+    color: var(--color-text-blue);
     font-size: 16px;
     line-height: 1.5;
     margin: 0 0 var(--spacing-m) 0;
@@ -79,7 +87,6 @@ onMounted(() => {
 .news-item a {
     font-weight: var(--font-weight-bold);
     color: var(--color-text-dark);
-    text-decoration: none;
 }
 
 .all-news-button {

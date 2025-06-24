@@ -17,11 +17,8 @@ export const useNewsStore = defineStore('news', {
       this.loading = true
       this.error = null
       try {
-        const { data, error } = await useFetch<NewsItem[]>('/api/news')
-        if (error.value) {
-          throw error.value
-        }
-        this.newsItems = data.value || []
+        const data = await $fetch<NewsItem[]>('/api/news')
+        this.newsItems = data || []
       } catch (e: any) {
         this.error = e
       } finally {
