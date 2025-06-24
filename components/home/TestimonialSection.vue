@@ -1,10 +1,14 @@
 <template>
   <section class="testimonial-section">
     <div class="testimonial-content">
-      <p class="quote">
-        Publicising and disseminating information about arbitration has been one of ICC’s commitments since its
-        creation and an instrumental factor in facilitating the development of trade worldwide.
-      </p>
+      <div class="quote-wrapper">
+        <img src="/assets/images/quote_2.svg" alt="left quote" class="quote-svg quote-svg-left" />
+        <p class="quote">
+          Publicising and disseminating information about arbitration has been one of ICC's commitments since its
+          creation and an instrumental factor in facilitating the development of trade worldwide.
+        </p>
+        <img src="/assets/images/quote_1.svg" alt="right quote" class="quote-svg quote-svg-right" />
+      </div>
       <div class="author">
         <p>Note to the Parties and the Arbitral Tribunals</p>
         <p>on the Conduct of Arbitration under the ICC Rules of Arbitration</p>
@@ -35,6 +39,33 @@ import BaseButton from '~/components/common/BaseButton.vue'
   gap: var(--spacing-m);
 }
 
+.quote-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-svg {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  z-index: 1;
+}
+
+.quote-svg-left {
+  left: 0;
+  transform: translateX(-60%);
+}
+
+.quote-svg-right {
+  right: 0;
+  bottom: 0;
+  top: auto;
+  transform: translateX(60%);
+}
+
 .quote {
   font-family: var(--font-family-heading);
   font-weight: 400;
@@ -44,29 +75,9 @@ import BaseButton from '~/components/common/BaseButton.vue'
   font-size: 1rem;
   line-height: 2rem;
   margin: 0;
-  position: relative;
   padding: 0 80px;
-}
-
-.quote::before,
-.quote::after {
-  content: '“';
-  font-family: var(--font-family-heading);
-  font-size: 80px;
-  color: var(--color-primary);
-  position: absolute;
-  top: 20px;
-}
-
-.quote::before {
-  left: 0;
-}
-
-.quote::after {
-  content: '”';
-  right: 0;
-  bottom: -20px;
-  top: auto;
+  position: relative;
+  z-index: 2;
 }
 
 .author {

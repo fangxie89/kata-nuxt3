@@ -20,7 +20,7 @@ const logos = [
   'shearman',
   'fcdo',
   'foley',
-  'eversheds',
+  'evershed',
   'mofa',
   'dentons',
   'three-crowns',
@@ -58,13 +58,6 @@ const logos = [
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-basis: 165px; /* From Figma */
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-  font-size: 1rem;
 }
 
-.logo-item:hover {
-  opacity: 1;
-}
 </style> 
