@@ -84,5 +84,6 @@ const buttonClasses = computed(() => [
   background-color: transparent;
   color: var(--color-text-dark);
   padding: 16px 0;
+  text-decoration: underline;
 }
 </style> 

@@ -1,5 +1,8 @@
 <template>
   <section class="hero-section">
+    <div class="filet filet-topleft"></div>
+    <div class="filet filet-bottomleft"></div>
+    <div class="filet filet-bottomright"></div>
     <div class="hero-logos">
       <div class="logo-circles-bg">
         <img ref="caseBgRef" src="~/assets/images/case_bg.gif" alt="Background" class="comp-bg" />
@@ -16,8 +19,7 @@
         A Unique Partnership for the Publication of ICC Arbitration Awards
       </h1>
       <p ref="heroParaRef">
-        ICC & Jus Mundi have joined forces to make them freely available to the global legal community on Jus Mundi to
-        improve access to justice and to enhance the global rule-based order.
+        The International Chamber of Commerce (ICC) & Jus Mundi have joined forces to make ICC Arbiration Awards and related materials freely available to the global legal community.
       </p>
       <div ref="ctaRef" class="cta-buttons">
         <BaseButton variant="primary" size="large">Access ICC Awards</BaseButton>
@@ -41,27 +43,27 @@ const ctaRef = ref(null);
 
 onMounted(() => {
   const tl = gsap.timeline();
-  // 1. 大圆缩放出现
+  // 1. jsCircle scale up
   tl.fromTo(
     jsCircleRef.value,
     { scale: 0.75, opacity: 0 },
     { scale: 1, opacity: 1, duration: 0.5, ease: 'power2.out' }
   )
-    // 2. ICC logo 渐入（延迟0.3s）
+    // 2. ICC logo fade in (delay 0.3s)
     .fromTo(
       iccLogoRef.value,
       { opacity: 0 },
       { opacity: 1, duration: 0.4, ease: 'power2.out' },
       '+=0.3'
     )
-    // 3. 标题和正文渐入（延迟0.3s）
+    // 3. content fade in (delay 0.3s)
     .fromTo(
       [heroTextRef.value, heroParaRef.value],
       { opacity: 0, y: 40 },
       { opacity: 1, y: 0, duration: 0.5, stagger: 0.05, ease: 'power2.out' },
       '+=0.3'
     )
-    // 4. 小圆滑入 + GIF 渐入（延迟0.3s）
+    // 4. partnerCircle slide in + caseBg fade in (delay 0.3s)
     .fromTo(
       partnerCircleRef.value,
       { x: -80, opacity: 0 },
@@ -72,9 +74,9 @@ onMounted(() => {
       caseBgRef.value,
       { opacity: 0 },
       { opacity: 1, duration: 0.5, ease: 'power2.out' },
-      '<' // GIF和小圆同时
+      '<' // caseBg and partnerCircle fade in at the same time
     )
-    // 5. CTA 按钮渐入（延迟0.3s）
+    // 5. cta fade in (delay 0.3s)
     .fromTo(
       ctaRef.value,
       { opacity: 0 },
@@ -94,6 +96,34 @@ onMounted(() => {
   gap: 64px;
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
+}
+
+.filet {
+  position: absolute;
+  width: 39px;
+  height: 2px;
+  background: #6AD300;
+  border-radius: 1px;
+  z-index: 10;
+}
+
+.filet-topleft {
+  left: 5%;
+  top: 10%;
+  transform: rotate(-180deg);
+}
+
+.filet-bottomleft {
+  left: 5%;
+  bottom: 10%;
+  transform: rotate(90deg);
+}
+
+.filet-bottomright {
+  right: 5%;
+  bottom: 10%;
+  transform: rotate(-135deg);
 }
 
 .hero-logos {
@@ -113,10 +143,10 @@ onMounted(() => {
 
 .comp-bg {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  left: 20%;
+  top: 30%;
+  width: 80%;
+  height: 70%;
   object-fit: cover;
   z-index: 1;
   opacity: 0;
@@ -200,5 +230,6 @@ onMounted(() => {
   gap: 32px;
   font-size: 0.875rem;
   opacity: 0;
+  margin-top: 50px;
 }
 </style>

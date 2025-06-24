@@ -1,28 +1,27 @@
 <template>
   <section class="testimonial-section">
-    <BaseCard>
-      <div class="testimonial-content">
-        <p class="quote">
-          “Publicising and disseminating information about arbitration has been one of ICC’s commitments since its creation and an instrumental factor in facilitating the development of trade worldwide.”
-        </p>
-        <p class="author">
-          - Note to the Parties and the Arbitral Tribunals on the Conduct of Arbitration under the ICC Rules of Arbitration
-        </p>
-        <BaseButton variant="simple">Read the whole document</BaseButton>
+    <div class="testimonial-content">
+      <p class="quote">
+        Publicising and disseminating information about arbitration has been one of ICC’s commitments since its
+        creation and an instrumental factor in facilitating the development of trade worldwide.
+      </p>
+      <div class="author">
+        <p>Note to the Parties and the Arbitral Tribunals</p>
+        <p>on the Conduct of Arbitration under the ICC Rules of Arbitration</p>
       </div>
-    </BaseCard>
+      <BaseButton variant="simple">Read the whole document</BaseButton>
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import BaseCard from '~/components/common/BaseCard.vue'
 import BaseButton from '~/components/common/BaseButton.vue'
 </script>
 
 <style scoped>
 .testimonial-section {
+  background: var(--color-white);
   padding: var(--spacing-xl);
-  background: var(--color-background);
   display: flex;
   justify-content: center;
 }
@@ -38,12 +37,15 @@ import BaseButton from '~/components/common/BaseButton.vue'
 
 .quote {
   font-family: var(--font-family-heading);
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-weight: 400;
   font-style: italic;
+  letter-spacing: 0px;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 2rem;
   margin: 0;
   position: relative;
-  padding: 0 40px;
+  padding: 0 80px;
 }
 
 .quote::before,
@@ -69,7 +71,7 @@ import BaseButton from '~/components/common/BaseButton.vue'
 
 .author {
   font-size: 1rem;
-  line-height: 1.5rem;
-  color: var(--color-text-light);
+  font-family: var(--font-family-body);
+  max-width: 640px;
 }
-</style> 
+</style>
