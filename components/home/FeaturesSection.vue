@@ -1,9 +1,16 @@
 <template>
   <section class="features-section">
     <div class="section-header">
-      <h2>Why this partnership?</h2>
+      <div class="header-with-lines">
+        <div class="filet filet-left"></div>
+        <h2>Why this partnership?</h2>
+        <div class="filet filet-right"></div>
+      </div>
       <p>
         Throughout its 100-year history, ICC has brought global business together to support an international rules-based order, including the promotion of global trade and commerce through the work of the ICC International Court of Arbitration.
+      </p>
+      <p>
+        ICC has partnered with Jus Mundi to provide full public access to all publishable ICC International Court of Arbitration awards and related documents made as of 1 January 2019
       </p>
     </div>
     <div class="features-grid">
@@ -45,18 +52,46 @@ const features = [
 }
 
 .section-header {
-  max-width: 862px;
   margin: 0 auto var(--spacing-xl);
 }
 
-.section-header h2 {
-  font-size: 56px;
+.header-with-lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
   margin-bottom: var(--spacing-m);
 }
 
+.filet {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #6AD300;
+  border-radius: 1px;
+  flex: none;
+}
+
+.filet-left {
+  left: 5%;
+}
+
+.filet-right {
+  right: 5%;
+}
+
+.section-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0;
+  width: 100%;
+}
+
 .section-header p {
-  font-size: 18px;
-  line-height: 1.8;
+  max-width: 862px;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin: 40px auto;
 }
 
 .features-grid {
@@ -73,8 +108,6 @@ const features = [
   align-items: center;
   gap: var(--spacing-m);
   padding: var(--spacing-l);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius);
 }
 
 .feature-item h3 {
@@ -89,5 +122,13 @@ const features = [
   line-height: 1.5rem;
   color: var(--color-text-light);
   margin: 0;
+}
+
+.feature-item :deep(.base-icon),
+.feature-item > :is(svg, img, .BaseIcon, .base-icon) {
+  width: 48px !important;
+  height: 48px !important;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 </style> 
