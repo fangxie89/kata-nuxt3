@@ -1,0 +1,35 @@
+:root {
+  --color-primary: #009EFE;
+  --color-secondary: #6AD300;
+  --color-text-dark: #2C2B2E;
+  --color-text-light: #818487;
+  --color-white: #FFFFFF;
+  --color-background: #F4F6F8;
+  --color-border: #E0E0E0;
+
+  --font-family-heading: 'Larken', serif;
+  --font-family-body: 'IBM Plex Sans', sans-serif;
+  --font-family-lato: 'Lato', sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+
+  --spacing-xs: 4px;
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 32px;
+  --spacing-xl: 64px;
+}
+
+body {
+  font-family: var(--font-family-body);
+  color: var(--color-text-dark);
+  background-color: var(--color-white);
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-extra-bold);
+} 
