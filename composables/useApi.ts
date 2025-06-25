@@ -1,8 +1,8 @@
 import { ref } from 'vue'
 
 /**
- * 通用 API 数据获取 composable
- * @param apiFn 需要执行的 API 请求函数
+ * General-purpose API data fetching composable
+ * @param apiFn The API request function to execute
  */
 export function useApi<T>(apiFn: () => Promise<T>) {
   const data = ref<T | null>(null)
