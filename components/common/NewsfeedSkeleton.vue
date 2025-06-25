@@ -11,6 +11,7 @@
 </template>
 
 <script setup lang="ts">
+defineOptions({ name: 'NewsfeedSkeleton' })
 // No props needed for this skeleton
 </script>
 
