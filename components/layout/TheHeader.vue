@@ -4,7 +4,7 @@
       variant="secondary"
       @click="scrollToTop"
     >
-      <img src="~/assets/images/ico-arrow_up.svg" alt="Scroll to top" />
+      <img src="~/assets/images/ico-arrow_up.svg" alt="Scroll to top" >
       Try Jus Mundi
     </BaseButton>
   </div>

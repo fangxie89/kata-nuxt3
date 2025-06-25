@@ -2,9 +2,9 @@
   <section class="features-section">
     <div class="section-header">
       <div class="header-with-lines">
-        <div class="filet filet-left"></div>
+        <div class="filet filet-left"/>
         <h2>Why this partnership?</h2>
-        <div class="filet filet-right"></div>
+        <div class="filet filet-right"/>
       </div>
       <p>
         Throughout its 100-year history, ICC has brought global business together to support an international rules-based order, including the promotion of global trade and commerce through the work of the ICC International Court of Arbitration.

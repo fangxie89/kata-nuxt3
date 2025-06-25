@@ -2,12 +2,12 @@
   <section class="testimonial-section">
     <div class="testimonial-content">
       <div class="quote-wrapper">
-        <img src="/assets/images/quote_2.svg" alt="left quote" class="quote-svg quote-svg-left" />
+        <img src="/assets/images/quote_2.svg" alt="left quote" class="quote-svg quote-svg-left" >
         <p class="quote">
           Publicising and disseminating information about arbitration has been one of ICC's commitments since its
           creation and an instrumental factor in facilitating the development of trade worldwide.
         </p>
-        <img src="/assets/images/quote_1.svg" alt="right quote" class="quote-svg quote-svg-right" />
+        <img src="/assets/images/quote_1.svg" alt="right quote" class="quote-svg quote-svg-right" >
       </div>
       <div class="author">
         <p>Note to the Parties and the Arbitral Tribunals</p>

@@ -4,9 +4,9 @@
       <p class="subtitle">Newsfeed</p>
       <h2>ICC International Court of Arbitration News & Links</h2>
     </div>
-    <div v-if="newsStore.loading" class="loading">Loading news...</div>
-    <div v-if="newsStore.error" class="error">Failed to load news.</div>
-    <div v-if="!newsStore.loading && newsStore.newsItems.length" class="news-scroller">
+    <NewsfeedSkeleton v-if="newsStore.loading" />
+    <div v-else-if="newsStore.error" class="error">Failed to load news.</div>
+    <div v-else-if="newsStore.newsItems.length" class="news-scroller">
       <BaseCard v-for="item in newsStore.newsItems" :key="item.id" class="news-item">
         <h4>{{ item.title }}</h4>
         <a :href="item.link" target="_blank">Read more</a>
@@ -23,6 +23,7 @@ import { onMounted } from 'vue'
 import { useNewsStore } from '~/stores/news'
 import BaseCard from '~/components/common/BaseCard.vue'
 import BaseButton from '~/components/common/BaseButton.vue'
+import NewsfeedSkeleton from '~/components/common/NewsfeedSkeleton.vue'
 
 const newsStore = useNewsStore()
 

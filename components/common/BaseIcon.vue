@@ -1,5 +1,5 @@
 <template>
-  <div v-if="svgContent" v-html="svgContent" class="base-icon"></div>
+  <div v-if="svgContent" class="base-icon" v-html="svgContent"/>
 </template>
 
 <script setup lang="ts">

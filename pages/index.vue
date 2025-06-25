@@ -1,17 +1,19 @@
 <template>
   <div>
-    <HeroSection />
-    <TestimonialSection />
-    <FeaturesSection />
-    <NewsfeedSection />
-    <PartnersSection />
+    <HeroSectionAsync />
+    <TestimonialSectionAsync />
+    <FeaturesSectionAsync />
+    <NewsfeedSectionAsync />
+    <PartnersSectionAsync />
   </div>
 </template>
 
 <script setup lang="ts">
-import HeroSection from '~/components/home/HeroSection.vue'
-import TestimonialSection from '~/components/home/TestimonialSection.vue'
-import FeaturesSection from '~/components/home/FeaturesSection.vue'
-import NewsfeedSection from '~/components/home/NewsfeedSection.vue'
-import PartnersSection from '~/components/home/PartnersSection.vue'
+import { defineAsyncComponent } from 'vue'
+
+const HeroSectionAsync = defineAsyncComponent(() => import('~/components/home/HeroSection.vue'))
+const TestimonialSectionAsync = defineAsyncComponent(() => import('~/components/home/TestimonialSection.vue'))
+const FeaturesSectionAsync = defineAsyncComponent(() => import('~/components/home/FeaturesSection.vue'))
+const NewsfeedSectionAsync = defineAsyncComponent(() => import('~/components/home/NewsfeedSection.vue'))
+const PartnersSectionAsync = defineAsyncComponent(() => import('~/components/home/PartnersSection.vue'))
 </script> 

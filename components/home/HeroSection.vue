@@ -1,16 +1,16 @@
 <template>
   <section class="hero-section">
-    <div class="filet filet-topleft"></div>
-    <div class="filet filet-bottomleft"></div>
-    <div class="filet filet-bottomright"></div>
+    <div class="filet filet-topleft"/>
+    <div class="filet filet-bottomleft"/>
+    <div class="filet filet-bottomright"/>
     <div class="hero-logos">
       <div class="logo-circles-bg">
-        <img ref="caseBgRef" src="~/assets/images/case_bg.gif" alt="Background" class="comp-bg" />
+        <img ref="caseBgRef" src="~/assets/images/case_bg.gif" alt="Background" class="comp-bg" >
         <div ref="jsCircleRef" class="js-circle">
-          <img ref="iccLogoRef" src="~/assets/images/logo_icc.svg" alt="ICC Logo" class="icc-logo" />
+          <img ref="iccLogoRef" src="~/assets/images/logo_icc.svg" alt="ICC Logo" class="icc-logo" >
         </div>
         <div ref="partnerCircleRef" class="partner-circle">
-          <img src="~/assets/images/logo_jm.svg" alt="Jus Mundi Logo" class="jm-logo" />
+          <img src="~/assets/images/logo_jm.svg" alt="Jus Mundi Logo" class="jm-logo" >
         </div>
       </div>
     </div>
@@ -49,26 +49,26 @@ onMounted(() => {
     { scale: 0.75, opacity: 0 },
     { scale: 1, opacity: 1, duration: 0.5, ease: 'power2.out' }
   )
-    // 2. ICC logo fade in (delay 0.3s)
+    // 2. ICC logo fade in (delay 0.2s)
     .fromTo(
       iccLogoRef.value,
       { opacity: 0 },
       { opacity: 1, duration: 0.4, ease: 'power2.out' },
-      '+=0.3'
+      '+=0.2'
     )
-    // 3. content fade in (delay 0.3s)
+    // 3. content fade in (delay 0.2s)
     .fromTo(
       [heroTextRef.value, heroParaRef.value],
       { opacity: 0, y: 40 },
       { opacity: 1, y: 0, duration: 0.5, stagger: 0.05, ease: 'power2.out' },
-      '+=0.3'
+      '+=0.2'
     )
-    // 4. partnerCircle slide in + caseBg fade in (delay 0.3s)
+    // 4. partnerCircle slide in + caseBg fade in (delay 0.2s)
     .fromTo(
       partnerCircleRef.value,
       { x: -80, opacity: 0 },
       { x: 0, opacity: 1, duration: 0.5, ease: 'power2.out' },
-      '+=0.3'
+      '+=0.2'
     )
     .fromTo(
       caseBgRef.value,
@@ -76,12 +76,12 @@ onMounted(() => {
       { opacity: 1, duration: 0.5, ease: 'power2.out' },
       '<' // caseBg and partnerCircle fade in at the same time
     )
-    // 5. cta fade in (delay 0.3s)
+    // 5. cta fade in (delay 0.2s)
     .fromTo(
       ctaRef.value,
       { opacity: 0 },
       { opacity: 1, duration: 0.4, ease: 'power2.out' },
-      '+=0.3'
+      '+=0.2'
     );
 });
 </script>
