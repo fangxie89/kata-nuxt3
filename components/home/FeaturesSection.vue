@@ -1,9 +1,9 @@
 <template>
-  <section class="features-section">
+  <section class="features-section" aria-labelledby="features-title" role="region">
     <div class="section-header">
       <div class="header-with-lines">
         <div class="filet filet-left"/>
-        <h2>Why this partnership?</h2>
+        <h2 id="features-title">Why this partnership?</h2>
         <div class="filet filet-right"/>
       </div>
       <p>
@@ -15,7 +15,7 @@
     </div>
     <div class="features-grid">
       <div v-for="feature in features" :key="feature.title" class="feature-item">
-        <BaseIcon :name="feature.icon" />
+        <BaseIcon :name="feature.icon" aria-hidden="true" />
         <h3>{{ feature.title }}</h3>
         <p>{{ feature.description }}</p>
       </div>

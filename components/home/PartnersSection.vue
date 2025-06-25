@@ -1,9 +1,9 @@
 <template>
-  <section class="partners-section">
-    <h2>Trusted by the Best Arbitration Teams Worldwide</h2>
+  <section class="partners-section" aria-labelledby="partners-title" role="region">
+    <h2 id="partners-title">Trusted by the Best Arbitration Teams Worldwide</h2>
     <div class="logos-container">
       <div v-for="logo in logos" :key="logo" class="logo-item">
-        <BaseIcon :name="logo" />
+        <BaseIcon :name="logo" aria-hidden="true" />
       </div>
     </div>
   </section>

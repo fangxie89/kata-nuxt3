@@ -1,13 +1,14 @@
 <template>
-  <section class="testimonial-section">
+  <section class="testimonial-section" aria-labelledby="testimonial-title" role="region">
+    <h2 id="testimonial-title" class="visually-hidden">Testimonial</h2>
     <div class="testimonial-content">
       <div class="quote-wrapper">
-        <img src="/assets/images/quote_2.svg" alt="left quote" class="quote-svg quote-svg-left" >
+        <NuxtImg src="/images/quote_2.svg" alt="" aria-hidden="true" class="quote-svg quote-svg-left" />
         <p class="quote">
           Publicising and disseminating information about arbitration has been one of ICC's commitments since its
           creation and an instrumental factor in facilitating the development of trade worldwide.
         </p>
-        <img src="/assets/images/quote_1.svg" alt="right quote" class="quote-svg quote-svg-right" >
+        <NuxtImg src="/images/quote_1.svg" alt="" aria-hidden="true" class="quote-svg quote-svg-right" />
       </div>
       <div class="author">
         <p>Note to the Parties and the Arbitral Tribunals</p>
@@ -84,5 +85,17 @@ import BaseButton from '~/components/common/BaseButton.vue'
   font-size: 1rem;
   font-family: var(--font-family-body);
   max-width: 640px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 </style>

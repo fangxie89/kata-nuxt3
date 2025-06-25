@@ -5,12 +5,9 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
     '@nuxt/eslint',
-    '@nuxtjs/sitemap',
+    '@nuxt/image-edge',
   ],
   css: [
     '~/assets/css/main.css'
-  ],
-  sitemap: {
-    // Default config: will auto-generate sitemap.xml for all routes
-  }
+  ]
 })

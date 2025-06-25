@@ -1,21 +1,21 @@
 <template>
-  <section class="hero-section">
+  <section class="hero-section" aria-labelledby="hero-title" role="region">
     <div class="filet filet-topleft"/>
     <div class="filet filet-bottomleft"/>
     <div class="filet filet-bottomright"/>
     <div class="hero-logos">
       <div class="logo-circles-bg">
-        <img ref="caseBgRef" src="~/assets/images/case_bg.gif" alt="Background" class="comp-bg" >
+        <NuxtImg ref="caseBgRef" src="/images/case_bg.gif" alt="" aria-hidden="true" class="comp-bg" />
         <div ref="jsCircleRef" class="js-circle">
-          <img ref="iccLogoRef" src="~/assets/images/logo_icc.svg" alt="ICC Logo" class="icc-logo" >
+          <img ref="iccLogoRef" src="/images/logo_icc.svg" alt="ICC Logo" class="icc-logo" >
         </div>
         <div ref="partnerCircleRef" class="partner-circle">
-          <img src="~/assets/images/logo_jm.svg" alt="Jus Mundi Logo" class="jm-logo" >
+          <NuxtImg src="/images/logo_jm.svg" alt="Jus Mundi Logo" class="jm-logo" />
         </div>
       </div>
     </div>
     <div class="hero-content">
-      <h1 ref="heroTextRef">
+      <h1 id="hero-title" ref="heroTextRef">
         A Unique Partnership for the Publication of ICC Arbitration Awards
       </h1>
       <p ref="heroParaRef">
