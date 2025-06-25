@@ -4,9 +4,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@pinia/nuxt',
-    '@nuxt/eslint'
+    '@nuxt/eslint',
+    '@nuxtjs/sitemap',
   ],
   css: [
     '~/assets/css/main.css'
-  ]
+  ],
+  sitemap: {
+    // Default config: will auto-generate sitemap.xml for all routes
+  }
 })
